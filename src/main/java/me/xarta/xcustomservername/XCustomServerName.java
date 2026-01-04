@@ -8,6 +8,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import org.slf4j.Logger;
 
+@SuppressWarnings("unused")
 @Mod(XCustomServerName.MODID) // Declare this class as mod's main class
 public class XCustomServerName {
 
@@ -26,5 +27,4 @@ public class XCustomServerName {
 
         LOGGER.info("xCustomServerName is on."); // Print success message
     }
-
 }

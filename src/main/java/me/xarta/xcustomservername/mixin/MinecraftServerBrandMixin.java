@@ -9,10 +9,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(MinecraftServer.class)
 public abstract class MinecraftServerBrandMixin {
-
     @Inject(method = "getServerModName", at = @At("HEAD"), cancellable = true)
     private void xcustomservername$overrideBrand(CallbackInfoReturnable<String> cir) {
-        String configured = ConfigHandler.SERVER_NAME.get();
+        String configured = ConfigHandler.SERVER_BRAND.get();
         if (!configured.isBlank()) {
             cir.setReturnValue(configured);
         }
